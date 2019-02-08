@@ -8,7 +8,7 @@ puts "3 коэффицент"
 c = gets.chomp.to_i
 
 d = (b**2) - (4 * a * b)
-f =Math.sqrt(d)
+f = Math.sqrt(d)
 
 if d < 0
   puts "дискриминант #{d} корней нет"
