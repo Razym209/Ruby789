@@ -21,9 +21,9 @@ elsif c > b && c > a
   lin2 = b
 end
 
-if (boldlin**2) - (lin1**2) + (lin2**2) == 0
+if (boldlin**2) == (lin1**2) + (lin2**2) 
    puts "треугольник прямоугольный"
-else (boldlin**2) - (lin1**2) + (lin2**2) != 0
+else 
   puts "треугольник непрямоугольный"
 end
 
