@@ -47,14 +47,14 @@ class Train
       c_station.send_train(self)
       @c_station += 1
       c_station.add_train(self)
-    end
+  end
   
   def station_p
     if previous_s
       c_station.send_train(self)
       @c_station -= 1
       c_station.add_train(self)
-    end
+  end
 
   def current_station
     @route.item[@c_station]
