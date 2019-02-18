@@ -56,7 +56,7 @@ class Train
       c_station.add_train(self)
   end
 
-  def current_station
+  def station_c
     @route.item[@c_station]
   end
 end
