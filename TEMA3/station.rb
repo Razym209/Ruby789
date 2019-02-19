@@ -1,23 +1,24 @@
 class Station
-  attr_reader :name, :composition
+  attr_reader :name, :trains
   
   def initialize(name)
     @name = name
-    @composition = {}
+    @trains = []
   end
 
-  def roster(train)
-    @composition << train
+  def accept(train)
+    @trains << train
   end
   
   def list_p
-    @composition.each {|train| puts train }
+    @trains.each { |train| puts train }
   end
   
   def list_t(type)
-    @composition.select {|train| train.type == type}
+    @trains.select { |train| train.type == type }
   end
+  
   def del(type)
-    @composition.delete(train)
+    @trains.delete(train)
   end
 end
