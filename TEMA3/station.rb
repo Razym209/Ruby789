@@ -18,7 +18,7 @@ class Station
     @trains.select { |train| train.type == type }
   end
   
-  def del(type)
+  def del(train)
     @trains.delete(train)
   end
 end
