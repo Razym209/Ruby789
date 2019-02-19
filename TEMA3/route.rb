@@ -13,7 +13,7 @@ class Route
     @stations.delete(station)
   end
 
-  def list_p
+  def list_puts
     puts @stations
   end
 end
