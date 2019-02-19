@@ -31,15 +31,15 @@ class Train
   def route=(route)
     @route = route
     @c_station = 0
-    @route.item[@c_station].add_train(self)
+    @route.stations[@c_station].add_train(self)
   end
 
   def next_station
-    @route.item[@c_stantion + 1]
+    @route.stations[@c_stantion + 1]
   end
 
   def previous_station
-    @route.item[@c_stantion - 1]
+    @route.stations[@c_stantion - 1]
   end
 
   def station_next
@@ -58,7 +58,7 @@ class Train
     end
   end
 
-  def station_c
-    @route.item[@c_station]
+  def station_worth
+    @route.stations[@c_station]
   end
 end
