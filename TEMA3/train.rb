@@ -44,17 +44,17 @@ class Train
 
   def station_next
     if next_station
-      c_station.send_train(self)
+      current_station.send_train(self)
       @current_station += 1
-      c_station.add_train(self)
+      current_station.add_train(self)
     end
   end 
   
   def station_pregoing
     if previous_station
-      c_station.send_train(self)
+      current_stationcurrent_station.send_train(self)
       @current_station -= 1
-      c_station.add_train(self)
+      current_station.add_train(self)
     end
   end
 
