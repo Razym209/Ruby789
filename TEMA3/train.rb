@@ -1,8 +1,8 @@
 class Train
-  attr_reader :namber, :type, :sum, :speed, :c_station, :route
+  attr_reader :number, :type, :sum, :speed, :c_station, :route
 
   def initialize(namber, type, sum)
-    @namber = namber
+    @number = namber
     @type = type
     @sum = sum
     @speed = 0
@@ -13,7 +13,7 @@ class Train
   end
 
   def braking(speed)
-    @speed  -= speed
+    @speed -= speed
   end
 
   def stop
@@ -21,37 +21,37 @@ class Train
   end
 
   def sum_addition
-    @sum += 1 if speed == 0 && @sum != 0
+    @sum += 1 if speed == 0 && @sum >= 0
   end
  
   def sum_addition
-   @sum -= 1 if speed == 0 && @sum != 0
+    @sum -= 1 if speed == 0 && @sum != 0
   end
 
-  def s_route(route)
+  def route=(route)
     @route = route
     @c_station = 0
     @route.item[@c_station].add_train(self)
   end
 
-  def next_s
+  def next_station
     @route.item[@c_stantion + 1]
   end
 
-  def previous_s
+  def previous_station
     @route.item[@c_stantion - 1]
   end
 
-  def station_n
-    if next_s
+  def station_next
+    if next_station
       c_station.send_train(self)
       @c_station += 1
       c_station.add_train(self)
     end
   end 
   
-  def station_p
-    if previous_s
+  def station_pregoing
+    if previous_station
       c_station.send_train(self)
       @c_station -= 1
       c_station.add_train(self)
