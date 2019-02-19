@@ -10,11 +10,11 @@ class Station
     @trains << train
   end
   
-  def list_p
+  def list_puts
     @trains.each { |train| puts train }
   end
   
-  def list_t(type)
+  def list_type(type)
     @trains.select { |train| train.type == type }
   end
   
