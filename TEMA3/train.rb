@@ -1,8 +1,8 @@
 class Train
   attr_reader :number, :type, :sum, :speed, :current_station, :route
 
-  def initialize(namber, type, sum)
-    @number = namber
+  def initialize(number, type, sum)
+    @number = number
     @type = type
     @sum = sum
     @speed = 0
