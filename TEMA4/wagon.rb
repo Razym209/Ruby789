@@ -13,5 +13,4 @@ class Wagon
   def list
     return @number
   end
-
 end
