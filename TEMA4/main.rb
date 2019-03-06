@@ -6,7 +6,3 @@ require_relative "./route.rb"
 require_relative "./wagon.rb"
 require_relative "./wagon_cargo.rb"
 require_relative "./wagon_passenger.rb"
-
-
-
-
