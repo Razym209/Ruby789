@@ -1,32 +1,31 @@
 class Station
   
   def initialize(name)
-		@name = name
-		@trains = []
-	end
+    @name = name
+    @trains = []
+  end
 
-	def list
-		puts "На станции сейчас #{@trains.length} поездов"
-	end
+  def list
+    puts "На станции сейчас #{@trains.length} поездов"
+  end
 
-	def list_type
+  def list_type
     puts "На станции поездов типа Freight: #{count_hash_dublicate(@trains, "freight")}"
     puts "На станции поездов типа Passenger: #{count_hash_dublicate(@trains, "passenger")}"
-	end
+  end
 
-	def take_train(train = {})
+  def take_train(train = {})
     @number = train.keys.join
     @type   = train.values.join
-		if @number.nil? || @type.nil?
-			puts "Невозможно"
-		else
-
+    if @number.nil? || @type.nil?
+      puts "Невозможно"
+	else
       @trains[@number] = @type
-			puts "Поезд #{@number} и типом #{@type} на станции"
-		end
-	end
+      puts "Поезд #{@number} и типом #{@type} на станции"
+     end
+  end
 
-	def send_train(train = {})
+  def send_train(train = {})
     @number = train.keys.join
     @type   = train.values.join
     if @trains.include?({@number => @type})
@@ -40,3 +39,4 @@ class Station
   private
   # У меня нет идей какие методы можно внести сюда
 end
+
