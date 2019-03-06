@@ -9,6 +9,4 @@ private
   def wagon_such_train?(wagon)
     wagon.class == WagonPassenger
   end
-
 end
-
