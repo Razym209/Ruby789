@@ -1,17 +1,17 @@
 class Train
-	attr_accessor :speed, :wagon, :type, :route, :station
-	def initialize(number, type)
+  attr_accessor :speed, :wagon, :type, :route, :station
+  def initialize(number, type)
     @type = type
     @number = number
-		@speed = 0
-		@wagon = []
-	end
+    @speed = 0
+    @wagon = []
+  end
 
-	def type
-		puts "Поезд №#{@number} типа #{@type}"
-	end
+  def type
+    puts "Поезд №#{@number} типа #{@type}"
+  end
 
-	def acceleration(speed) # ускорение
+  def acceleration(speed) # ускорение
     @speed  += speed
   end
 
@@ -48,19 +48,19 @@ class Train
 
   end
 
-	def delete_wagon
-		if speed_zero?
-			@wagon.pop
-			puts "вагон отцеплен"
-		else
-			puts "невозможно отцепить вагон во время движжения поеза "
-		end
-	end
+  def delete_wagon
+    if speed_zero?
+      @wagon.pop
+      puts "вагон отцеплен"
+    else
+      puts "невозможно отцепить вагон во время движжения поеза "
+    end
+  end
 
-	def take_route(station)
-		@station = station
+  def take_route(station)
+    @station = station
     puts "Поезд №#{@number} готов ехать с станции #{@station.first} на станцию #{@station.last}"
-	end
+  end
 
   def move(station)
     if @route.include?(station)
@@ -97,5 +97,4 @@ private
 
   def wagon_such_train?
   end
-
 end
