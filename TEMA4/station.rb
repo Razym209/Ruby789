@@ -19,10 +19,10 @@ class Station
     @type   = train.values.join
     if @number.nil? || @type.nil?
       puts "Невозможно"
-	else
+    else
       @trains[@number] = @type
       puts "Поезд #{@number} и типом #{@type} на станции"
-     end
+    end
   end
 
   def send_train(train = {})
@@ -36,7 +36,4 @@ class Station
     end
   end
 
-  private
-  # У меня нет идей какие методы можно внести сюда
-end
 
