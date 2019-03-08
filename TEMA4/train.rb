@@ -72,7 +72,7 @@ class Train
   end
 
   def list
-    return {@number => @type}
+    { @number => @type }
   end
 
   private
