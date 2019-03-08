@@ -75,10 +75,7 @@ class Train
     return {@number => @type}
   end
 
-
-
-
-private
+  private
 # Методы вынесены потому что они не используются клиентским кодом, а только другими методами.
 
   def speed_zero?
