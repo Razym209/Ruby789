@@ -85,8 +85,7 @@ class Train
   def count_hash_dublicate(hash, value)
     count = 0
     hash.values.each do |t|
-      if t == value
-        count += 1
+      count += 1 if t == value
       end
     end
     return count
