@@ -12,40 +12,39 @@ class Train
   end
 
   def speed_up(speed) # ускорение
-      @speed  += speed
-    end
+    @speed  += speed
+  end
 
-    def braking(speed) # замедление
-      @speed -= speed if @speed > 0 
-    end
+  def braking(speed) # замедление
+    @speed -= speed if @speed > 0 
+  end
 
-    def stop # стоп
-      @speed = 0
-    end
+  def stop # стоп
+    @speed = 0
+  end
 
-    def route=(route) # возрат к началу
-      @route = route
-      @current_station = 0
-      @route.stations[@current_station].add_train(self)
-    end
+  def route=(route) # возрат к началу
+    @route = route
+    @current_station = 0
+    @route.stations[@current_station].add_train(self)
+  end
 
 
-    def add_wagon(wagon)
+  def add_wagon(wagon)
     @wagon << wagon.list
     puts "К поезду №#{@number} добавлен вагон №#{wagon.list}, теперь у него вагонов #{@wagon.size} шт."
-    end
+  end
 
 
-    def list_wagon
-      puts "У поезда сейчас #{@wagon.size} вагонов."
-      puts "К поезду присоединены вагоны #{@wagon}"
-
-    end
+  def list_wagon
+    puts "У поезда сейчас #{@wagon.size} вагонов."
+    puts "К поезду присоединены вагоны #{@wagon}"
+  end
 
   def delete_wagon
     if speed_zero?
       @wagon.pop
-    puts "вагон отцеплен"
+      puts "вагон отцеплен"
     else
       puts "невозможно отцепить вагон во время движжения поеза "
     end
@@ -53,26 +52,26 @@ class Train
 
   def take_route(station)
     @station = station
-      puts "Поезд №#{@number} готов ехать с станции #{@station.first} на станцию #{@station.last}"
+    puts "Поезд №#{@number} готов ехать с станции #{@station.first} на станцию #{@station.last}"
   end
 
-    def move(station)
-      if @route.include?(station)
-        @station = station
-        puts "Поезд №#{@number} приехал на с станцию #{@station}"
-      else
-        puts "Такой станции нет в маршруте"
-      end
+  def move(station)
+    if @route.include?(station)
+      @station = station
+      puts "Поезд №#{@number} приехал на с станцию #{@station}"
+    else
+      puts "Такой станции нет в маршруте"
     end
+  end
 
-    def list
-       {@number => @type}
-    end
+  def list
+     {@number => @type}
+  end
 
-def move_go
+  def move_go
     station_index = @route.stations.index(@current_station)
-      @current_station = @route.stations[station_index + 1]
-      @current_station.get_train(self)
+    @current_station = @route.stations[station_index + 1]
+    @current_station.get_train(self)
   end
 
   def move_back
@@ -81,11 +80,8 @@ def move_go
     @current_station.get_train(self)  
   end
 
-
-
 private
-# Методы вынесены потому что они не используются клиентским кодом, а только другими методами.
-
+  
   def speed_zero?
     @speed.zero?
   end
@@ -97,7 +93,7 @@ private
         count += 1
       end
     end
-    return count
+    count
   end
 
   def wagon_such_train?
