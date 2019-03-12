@@ -21,7 +21,6 @@ class Station
     if @number.nil? || @type.nil?
       puts "Невозможно"
     else
-
       @trains[@number] = @type
       puts "Поезд #{@number} и типом #{@type} на станции"
     end
@@ -38,11 +37,7 @@ class Station
     end
   end
 
-def show_trains
+  def show_trains
     @trains.each {|train| puts "On station - #{@name} train - #{train.number}"}
   end
-
-
 end
-
-
