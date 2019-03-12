@@ -44,7 +44,7 @@ class Train
   def delete_wagon
     if speed_zero?
       @wagon.pop
-    puts "вагон отцеплен"
+      puts "вагон отцеплен"
     else
       puts "невозможно отцепить вагон во время движжения поеза "
     end
