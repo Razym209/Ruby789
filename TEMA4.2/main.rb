@@ -110,11 +110,6 @@ class Main
     end
   end
 
-  def add_st(station)
-    @stations.insert(-2, station)
-  end
-
-
   def take_train
     if @trains.size >= 0
       list_train
