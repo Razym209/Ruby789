@@ -41,8 +41,6 @@ class Station
 def show_trains
     @trains.each {|train| puts "On station - #{@name} train - #{train.number}"}
   end
-
-
 end
 
 
