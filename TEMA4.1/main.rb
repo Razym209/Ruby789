@@ -51,7 +51,7 @@ attr_accessor :number, :type
     when 7
       add_wago
     when 8
-      delit_wagon
+      delit_wagon 
     when 9
       list_train
     when 10
@@ -113,21 +113,21 @@ attr_accessor :number, :type
   def list_station
     @stations.each_with_index do |val, index|
       puts "#{index} - #{val.name}"
-      puts "#{@stations}" #Пусть для меня остаётся
+      #puts "#{@stations}" #Пусть для меня остаётся
     end
   end
 
   def list_train
     @trains.each_with_index do |train, number|
       puts "#{number} - #{train.number}"
-      puts "#{@trains}" #Пусть для меня остаётся
+      #puts "#{@trains}" #Пусть для меня остаётся
     end
   end
 
   def list_routes
     @routes.each_with_index do |val, index|
     puts "#{index} - #{val.name}"
-    puts "#{@routes}" #Пусть для меня остаётся
+    #puts "#{@routes}" #Пусть для меня остаётся
     end
   end
 
