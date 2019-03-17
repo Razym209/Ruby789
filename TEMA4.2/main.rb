@@ -113,24 +113,21 @@ attr_accessor :number, :type
   def list_station
     @stations.each_with_index do |val, index|
       puts "#{index} - #{val.name}"
-      #puts @stations #Пусть для меня остаётся
-      puts"#{@stations}"
+      #puts @stations #Пусть для меня остаётся #puts"#{@stations}"
     end
   end
 
   def list_train
     @trains.each_with_index do |train, number|
       puts "#{number} - #{train.number}"
-      #puts @trains #Пусть для меня остаётся
-      puts"#{@trains}"
+      #puts @trains #Пусть для меня остаётся #puts"#{@trains}"
     end
   end
 
   def list_routes
     @routes.each_with_index do |val, index|
     puts "#{index} - #{val.name}"
-    #puts @routes #Пусть для меня остаётся
-    puts"#{@routes}"
+    #puts @routes #Пусть для меня остаётся #puts"#{@routes}"
     end
   end
 
