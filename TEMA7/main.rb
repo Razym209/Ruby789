@@ -163,12 +163,12 @@ attr_accessor :number, :type
       print "Введите количество мест "
       seats = gets.to_i
       number = train.wagon.size + 1
-      train.add_carrige(WagonPassenger.new(seats, number))
+      train.add_wagon(WagonPassenger.new(seats, number))
     elsif train && train.type == 'Cargo'
       print "Введите объем - "
       seats = gets.to_i
       number = train.wagon.size + 1
-      train.add_carrige(WagonCargo.new(volume, number))
+      train.add_wagon(WagonCargo.new(volume, number))
     else
     end
     rescue StandardError => e
