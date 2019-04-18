@@ -23,13 +23,14 @@ module Accessors
 
   def set_with_history(name, var_name, history_var)
     define_method("#{name}=".to_sym) do |value|
+      last_val = instance_variable_get(var_name)
       instance_variable_set(var_name, value)
-      history = if !instance_variable_get(history_var).nil?
+      history = if !instance_variable_get(history_var)
                   instance_variable_get(history_var)
                 else
                   instance_variable_set(history_var, [])
                 end
-      history << value
+      history << last_val
     end
   end
 end
