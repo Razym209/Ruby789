@@ -9,7 +9,6 @@ class Main
     puts 'Введите свое имя.'
     name = gets.chomp
     @player = Player.new(name)
-    puts @player
     show_base_commands
   end
 
