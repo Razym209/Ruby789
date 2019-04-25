@@ -42,7 +42,7 @@ class Game
   def new_round(user)
     case @main.command_new(user)
     when 1
-     @player.pass_move1 if @passed_the_move
+     @player.pass_move1 if !@passed_the_move
     when 2
       @player.take_card1 if !@took_the_card
     when 3
