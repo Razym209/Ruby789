@@ -18,6 +18,7 @@ class Menu
   end
 
   def start_game
+    @game_over = false
     game.make_bets
     game.deal_cards
     game.play_game
