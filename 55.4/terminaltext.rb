@@ -53,7 +53,7 @@ module TerminalText
     when 2
        @player.take_card(hand.deal_one_card)
     when 3
-      @menu.open_cards
+      @player.open_cards if @took_the_card
     when 4
       exit_game
     end
