@@ -7,7 +7,6 @@ class Game                #class Game
     @player = Player.new(name = 'Player')
     @dealer = Dealer.new
     @bank = 0
-    @game_over = false
     @hand = Hand.new
   end
 
