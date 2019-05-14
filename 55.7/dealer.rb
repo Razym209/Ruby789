@@ -9,6 +9,7 @@ class Dealer < User  #def dealer_cards
   def process_decision(hand)
     if can_pass?(score)
       pass_move
+      open_cards
     elsif can_take_card?
       take_card(hand.deal_one_card)
     else
