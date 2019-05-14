@@ -12,6 +12,7 @@ class Dealer < User  #def dealer_cards
       open_cards
     elsif can_take_card?
       take_card(hand.deal_one_card)
+      open_cards
     else
       open_cards
     end
