@@ -46,8 +46,6 @@ module TerminalText
       player.pass_move
     when 2
        player.take_card(hand.deal_one_card)
-    when 3
-      player.pass_move
     end
   end
 
@@ -55,7 +53,6 @@ module TerminalText
     puts "\nЧто вы хотите сделать?"
     puts "Введите '1', чтобы передать ход."
     puts "Введите '2' получить одну карту." 
-    puts "Введите '3' открыть свои карты." 
     gets.to_i
   end
 
