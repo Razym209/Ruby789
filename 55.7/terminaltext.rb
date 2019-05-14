@@ -44,23 +44,18 @@ module TerminalText
     case command_new
     when 1
       player.pass_move
-      @pass_one = true
-      @player_take_one_card = true
     when 2
        player.take_card(hand.deal_one_card)
-       @pass_one = true
-       @player_take_one_card = true
     when 3
-      player.pass_move
       player.open_cards && !@took_the_card
     end
   end
 
   def command_new
     puts "\nЧто вы хотите сделать?"
-    puts "Введите '1', чтобы передать ход." unless @pass_one
-    puts "Введите '2' получить одну карту." unless @player_take_one_card
-    puts "Введите '3' открыть свои карты." if @pass_one && @player_take_one_card
+    puts "Введите '1', чтобы передать ход."
+    puts "Введите '2' получить одну карту." 
+    puts "Введите '3' открыть свои карты." 
     gets.to_i
   end
 
