@@ -47,7 +47,7 @@ module TerminalText
     when 2
        player.take_card(hand.deal_one_card)
     when 3
-      player.open_cards && !@took_the_card
+      player.pass_move
     end
   end
 
