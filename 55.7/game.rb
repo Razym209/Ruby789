@@ -1,7 +1,7 @@
 class Game                #class Game
   include TerminalText
 
-  attr_accessor :bank, :game_over, :hand, :pass_one, :player_take_one_card
+  attr_accessor :bank, :game_over, :hand
 
   WIN_SCORE = 21
 
@@ -16,8 +16,6 @@ class Game                #class Game
     @bank = 0
     @game_over = false
     @hand = Hand.new
-    @pass_one = false
-    @player_take_one_card = false
     self.bank += @player.make_bet
     self.bank += @dealer.make_bet
   end
